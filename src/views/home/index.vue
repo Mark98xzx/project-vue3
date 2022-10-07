@@ -9,7 +9,14 @@
 
         </div>
         <!-- 轮播图 -->
-        <Swiper />
+        <Suspense>
+            <template #default>
+                <Swiper />
+            </template>
+            <template #fallback>
+                <div>loading...</div>
+            </template>
+        </Suspense>
         <!-- 列表 -->
         <List />
     </div>
